@@ -1,0 +1,22 @@
+{
+  "name": "typescripttutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "typesc": "tsc --target ES5 $npm_config_inFile --outFile ./app.js --watch",
+    "check-env": "node -e 'console.log(process.env)' | grep npm",
+    "demo": "echo \"Hello $npm_config_first $npm_config_last\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "comments": {
+    "demo-script": "$ npm run demo --last=Kundel --first=Dominik",
+    "typesc-script": "$ npm run typesc --inFile=./Generics/*.ts"
+  }
+}
