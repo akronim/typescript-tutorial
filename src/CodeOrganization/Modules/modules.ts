@@ -3,6 +3,7 @@ export interface Ship {
     port: string;
     displacement: number;
 }
+
 export class Ferry implements Ship {
     constructor(
         public name: string,
@@ -10,7 +11,9 @@ export class Ferry implements Ship {
         public displacement: number) {
     }
 }
+
 const defaultDisplacement = 4000;
+
 class PrivateShip implements Ship {
     constructor(
         public name: string,

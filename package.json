@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server",
-    "typesc": "tsc --target ES5 $npm_config_inFile --outFile ./app.js --watch",
+    "typesc": "tsc --target ES5 $npm_config_inFile --outFile ./app.js --watch --module amd",
     "check-env": "node -e 'console.log(process.env)' | grep npm",
     "demo": "echo \"Hello $npm_config_first $npm_config_last\""
   },
