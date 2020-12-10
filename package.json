@@ -17,6 +17,9 @@
   },
   "comments": {
     "demo-script": "$ npm run demo --last=Kundel --first=Dominik",
-    "typesc-script": "$ npm run typesc --inFile=./src/Generics/*.ts"
+    "typesc-script": "$ npm run typesc --inFile=./src/Exercises/*.ts"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
   }
 }
