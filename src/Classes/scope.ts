@@ -11,8 +11,8 @@ TUTORIAL.lostContext = (function () {
 
   const clickCounter = new ClickCounter();
 
-  document.getElementById("scope-target-1").onclick =
-    clickCounter.registerClick;
+  const target_1 = document.getElementById("scope-target-1");
+  target_1 && (target_1.onclick = clickCounter.registerClick);
 
   return {
     // someProperty: "prop value",
@@ -32,8 +32,9 @@ TUTORIAL.preservingContextArrow = (function () {
 
   const clickCounter = new ClickCounter();
 
-  document.getElementById("scope-target-2").onclick =
-    clickCounter.registerClick;
+  const target_2 = document.getElementById("scope-target-2");
+
+  target_2 && (target_2.onclick = clickCounter.registerClick);
 
   return {
     // someProperty: "prop value",
@@ -53,11 +54,15 @@ TUTORIAL.preservingContextClosure = (function () {
 
   const clickCounter = new ClickCounter();
 
+  const target_3 = document.getElementById("scope-target-3");
+
   // you can wrap the call to the instance method in a function to
   // create a closure that keeps the context alongside the function
-  document.getElementById("scope-target-3").onclick = function () {
-    clickCounter.registerClick();
-  };
+  if (target_3) {
+    target_3.onclick = function () {
+      clickCounter.registerClick();
+    };
+  }
 
   return {
     // someProperty: "prop value",
@@ -80,7 +85,9 @@ TUTORIAL.preservingContextBind = (function () {
 
   const clickHandler = clickCounter.registerClick.bind(clickCounter);
 
-  document.getElementById("scope-target-4").onclick = clickHandler;
+  const target_4 = document.getElementById("scope-target-4");
+
+  target_4 && (target_4.onclick = clickHandler);
 
   return {
     // someProperty: "prop value",
@@ -98,10 +105,15 @@ TUTORIAL.preservingContextEventCapturing = (function () {
     }
   }
   const clickCounter = new ClickCounter();
-  document.getElementById("scope-target-5").onclick = (e) => {
-    const target = e.target || e.srcElement;
-    clickCounter.registerClick((<Element>target).id);
-  };
+
+  const target_5 = document.getElementById("scope-target-5");
+
+  if (target_5) {
+    target_5.onclick = (e) => {
+      const target = e.target || e.srcElement;
+      clickCounter.registerClick((<Element>target).id);
+    };
+  }
 
   return {
     // someProperty: "prop value",
@@ -116,4 +128,16 @@ TUTORIAL.preservingContextEventCapturing = (function () {
     this guideline; when you need to preserve the scope of a callback, prefer 
     to preserve it when setting up the callback, not by adjusting the class
     itself.
+*/
+
+/*
+  <body>
+    <div id="myId"></div>
+    <input type="button" id="scope-target-1" value="Click me" />
+    <input type="button" id="scope-target-2" value="Click me" />
+    <input type="button" id="scope-target-3" value="Click me" />
+    <input type="button" id="scope-target-4" value="Click me" />
+    <input type="button" id="scope-target-5" value="Click me" />
+  </body>
+
 */

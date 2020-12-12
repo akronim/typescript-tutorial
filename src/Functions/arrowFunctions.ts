@@ -29,17 +29,17 @@ TUTORIAL.arrowFunctions = (function () {
 
 // Preserving scope with arrow syntax
 TUTORIAL.preservingScope = (function () {
-  const scopeLosingExample = {
-    text: "Property from lexical scope",
-    run: function () {
-      setTimeout(function () {
-        console.log(this.text);
-      }, 1000);
-    },
-  };
+  // const scopeLosingExample = {
+  //   text: "Property from lexical scope",
+  //   run: function () {
+  //     setTimeout(function () {
+  //       console.log(this.text);
+  //     }, 1000);
+  //   },
+  // };
 
-  // alerts undefined
-  scopeLosingExample.run();
+  // // alerts undefined
+  // scopeLosingExample.run();
 
   const scopePreservingExample = {
     text: "Property from lexical scope",

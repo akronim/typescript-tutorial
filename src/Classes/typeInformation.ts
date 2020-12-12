@@ -39,7 +39,7 @@ TUTORIAL.typeInformationInstanceof = (function () {
 TUTORIAL.typeInformationIn = (function () {
   class Display {
     name: string = "";
-    size: number;
+    size!: number;
   }
 
   class Television extends Display {}
@@ -85,5 +85,3 @@ TUTORIAL.typeInformationIn = (function () {
     // publicMethod: publicMethod,
   };
 })();
-
-

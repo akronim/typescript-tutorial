@@ -1,68 +1,65 @@
 var TUTORIAL = TUTORIAL || {};
 
 TUTORIAL.classHeritage = (function () {
-  interface Audio {
-    play(): any;
-  }
-
-  // A class can implement multiple interfaces
-  class Song implements Audio {
-    constructor(private artist: string, private title: string) {}
-
-    // The play method must be implemented
-    play(): void {
-      console.log("Playing " + this.title + " by " + this.artist);
-    }
-
-    static Comparer(a: Song, b: Song) {
-      if (a.title === b.title) {
-        return 0;
-      }
-      return a.title > b.title ? 1 : -1;
+  class Animal {
+    move(distanceInMeters: number = 0) {
+      console.log(`Animal moved ${distanceInMeters}m.`);
     }
   }
 
-  class Playlist {
-    constructor(public songs: Audio[]) {}
-
-    play() {
-      var song = this.songs.pop();
-      song.play();
-    }
-
-    sort() {
-      this.songs.sort(Song.Comparer);
+  class Dog extends Animal {
+    bark() {
+      console.log("Woof! Woof!");
     }
   }
 
-  // A class can only inherit from a single superclass.
-  // This class will gain all the properties and methods of the base class.
-  class RepeatingPlaylist extends Playlist {
-    private songIndex = 0;
-    constructor(songs: Song[]) {
-      super(songs);
-    }
+  const dog = new Dog();
+  dog.bark();
+  dog.move(10);
+  dog.bark();
 
-    // You can override a public member of the base class
-    play() {
-      this.songs[this.songIndex].play();
-      this.songIndex++;
-      if (this.songIndex >= this.songs.length) {
-        this.songIndex = 0;
-      }
+  return {
+    // someProperty: "prop value",
+    // publicMethod: publicMethod,
+  };
+})();
+
+TUTORIAL.classHeritage2 = (function () {
+  class Animal {
+    name: string;
+    constructor(theName: string) {
+      this.name = theName;
+    }
+    move(distanceInMeters: number = 0) {
+      console.log(`${this.name} moved ${distanceInMeters}m.`);
     }
   }
 
-  const songs = [
-    new Song("Bushbaby", "Megaphone"),
-    new Song("Delays", "One More Lie In"),
-    new Song("Goober Gun", "Stereo"),
-    new Song("Sohnee", "Shatter"),
-    new Song("Get Amped", "Celebrity"),
-  ];
+  class Snake extends Animal {
+    constructor(name: string) {
+      super(name);
+    }
+    move(distanceInMeters = 5) {
+      console.log("Slithering...");
+      super.move(distanceInMeters);
+    }
+  }
 
-  const repeatingPlaylist = new RepeatingPlaylist(songs);
-  repeatingPlaylist.play();
+  class Horse extends Animal {
+    constructor(name: string) {
+      super(name);
+    }
+    move(distanceInMeters = 45) {
+      console.log("Galloping...");
+      super.move(distanceInMeters);
+    }
+  }
+
+  let sam = new Snake("Sammy the Python");
+  let tom: Animal = new Horse("Tommy the Palomino");
+
+  sam.move();
+  tom.move(34);
 
   return {
     // someProperty: "prop value",

@@ -44,7 +44,7 @@ TUTORIAL.typeGuards = (function () {
   type BusinessPartner = Customer | Supplier;
 
   function signContract(partner: BusinessPartner): string {
-    let message: string;
+    let message: string = '';
     if (partner instanceof Customer) {
       message = partner.isCreditAllowed()
         ? "Sign a new contract with the customer"

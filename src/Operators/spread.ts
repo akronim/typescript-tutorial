@@ -29,7 +29,9 @@ TUTORIAL.spreadOperator = (function () {
 
   // E3 - Spread operator in function call
   function add(a?: number, b?: number, c?: number) {
-    return a + b + c;
+    if (a && b && c) {
+      return a + b + c;
+    }
   }
   const hexagons = [1, 6, 15];
   // Spread operator in function call

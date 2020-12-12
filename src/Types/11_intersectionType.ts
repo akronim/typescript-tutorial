@@ -12,7 +12,7 @@ TUTORIAL.intersectionType = (function () {
   }
   type Biathelete = Skier & Shooter;
 
-  let biathelete : Biathelete = null;
+  let biathelete: Biathelete = { slide: () => {}, shoot: () => {} };
   biathelete.shoot();
   biathelete.slide();
 

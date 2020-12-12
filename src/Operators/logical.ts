@@ -4,7 +4,7 @@ TUTORIAL.notOperator = (function () {
   // NOT
   const truthyString = "Truthy string";
 
-  let falseyString: string;
+  let falseyString: string = "";
 
   // False, it checks the string but inverts the truth
   const invertedTest = !truthyString;
@@ -101,7 +101,7 @@ TUTORIAL.shortCircuit = (function () {
     rooms: number;
   }
 
-  let caravan: Caravan;
+  let caravan: Caravan = { rooms: 2 };
 
   if (caravan && caravan.rooms > 5) {
     //...

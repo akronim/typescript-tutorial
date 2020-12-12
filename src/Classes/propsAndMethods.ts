@@ -81,7 +81,7 @@ TUTORIAL.propertyGettersAndSetters = (function () {
   }
   
   class WarehouseLocation {
-    private _stockItem: StockItem;
+    private _stockItem!: StockItem;
     constructor(public aisle: number, public slot: string) {}
     get stockItem() {
       return this._stockItem;
