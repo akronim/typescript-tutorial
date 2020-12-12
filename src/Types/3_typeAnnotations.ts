@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.typeAnnotations = (function () {
+namespace TypeAnnotations {
   // primitive type annotation
   const name: string = "Steve";
   const heightInCentimeters: number = 182.88;
@@ -25,9 +23,4 @@ TUTORIAL.typeAnnotations = (function () {
     name: "Mark",
     heightInCentimeters: 183,
   };
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

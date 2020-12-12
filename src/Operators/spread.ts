@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.spreadOperator = (function () {
+namespace SpreadOperator {
   // E1 - Array spreading
   const squares = [1, 4, 9, 16, 25];
 
@@ -38,9 +36,4 @@ TUTORIAL.spreadOperator = (function () {
   const result = add(...hexagons);
   // 22
   console.log(result);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

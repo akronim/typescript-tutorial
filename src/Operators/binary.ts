@@ -1,8 +1,6 @@
 // Binary operators: - * / % << >> >>> & ^ |
 
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.binaryOperators = (function () {
+namespace BinaryOperators {
   // 6: number
   const num1 = 5 + 1;
   // '51': string
@@ -18,13 +16,7 @@ TUTORIAL.binaryOperators = (function () {
 
   const a: any = "true";
   const isActive: boolean = true;
-  
 
   const x = a + isActive;
   console.log(x);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

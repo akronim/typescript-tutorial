@@ -1,7 +1,5 @@
 // literal types
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.literalTypes = (function () {
+namespace LiteralTypes {
   // String literal type
   type Kingdom =
     | "Bacteria"
@@ -71,9 +69,4 @@ TUTORIAL.literalTypes = (function () {
 
   const combinedNames = combine("Max", "Anna", "as-text");
   console.log(combinedNames);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

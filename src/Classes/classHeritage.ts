@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.classHeritage = (function () {
+namespace ClassHeritage {
   class Animal {
     move(distanceInMeters: number = 0) {
       console.log(`Animal moved ${distanceInMeters}m.`);
@@ -17,14 +15,9 @@ TUTORIAL.classHeritage = (function () {
   dog.bark();
   dog.move(10);
   dog.bark();
+}
 
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-TUTORIAL.classHeritage2 = (function () {
+namespace ClassHeritage2 {
   class Animal {
     name: string;
     constructor(theName: string) {
@@ -60,12 +53,7 @@ TUTORIAL.classHeritage2 = (function () {
 
   sam.move();
   tom.move(34);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 /* 
     A method on a class can have fewer parameters than the interface specifies. 

@@ -1,7 +1,5 @@
 // union types - you can specify that the value can be of more than a single type
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.unionTypes = (function () {
+namespace UnionTypes {
   // Type annotation for a union type
   let union: boolean | number;
 
@@ -16,7 +14,7 @@ TUTORIAL.unionTypes = (function () {
 
   // Type alias for a union type
   type StringOrError = string | Error;
-  
+
   // Type alias for union of many types
   type SeriesOfTypes = string | number | boolean | Error;
 
@@ -36,9 +34,4 @@ TUTORIAL.unionTypes = (function () {
 
   const combinedNames = combine("Max", "Anna");
   console.log(combinedNames);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

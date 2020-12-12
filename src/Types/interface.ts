@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   interface PersonInterface {
     name: string;
     heightInCentimeters: number;
@@ -9,9 +7,4 @@ TUTORIAL.interfaces = (function () {
     name: "Bendict",
     heightInCentimeters: 183,
   };
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

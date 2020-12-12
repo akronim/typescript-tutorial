@@ -1,9 +1,7 @@
-var TUTORIAL = TUTORIAL || {};
-
 // An intersection type combines several different types into a single supertype
 // that includes the members from all participating types.
 
-TUTORIAL.intersectionType = (function () {
+namespace IntersectionType {
   interface Skier {
     slide(): void;
   }
@@ -15,9 +13,4 @@ TUTORIAL.intersectionType = (function () {
   let biathelete: Biathelete = { slide: () => {}, shoot: () => {} };
   biathelete.shoot();
   biathelete.slide();
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

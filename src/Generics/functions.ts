@@ -1,9 +1,7 @@
-var TUTORIAL = TUTORIAL || {};
-
 // Generic programming allows algorithms to be written in way that allows
 // the types to be specified later.
 
-TUTORIAL.genericFunctions = (function () {
+namespace GenericFunctions {
   // Generic functions
   function reverse<T>(list: T[]): T[] {
     const reversedList: T[] = [];
@@ -22,9 +20,4 @@ TUTORIAL.genericFunctions = (function () {
 
   // 4, 3, 2, 1
   const reversedNumbers = reverse<number>(numbers);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

@@ -1,9 +1,7 @@
-var TUTORIAL = TUTORIAL || {};
-
-// An abstract class can be used as a base class, 
+// An abstract class can be used as a base class,
 // but can’t be instantiated directly.
 
-TUTORIAL.abstractClasses = (function () {
+namespace AbstractClasses {
   // Abstract class
   abstract class Logger {
     abstract notify(message: string): void;
@@ -15,13 +13,13 @@ TUTORIAL.abstractClasses = (function () {
   }
 
   class ConsoleLogger extends Logger {
-    notify(message) {
+    notify(message: string) {
       console.log(this.getMessage(message));
     }
   }
 
   class InvasiveLogger extends Logger {
-    notify(message) {
+    notify(message: string) {
       console.log(this.getMessage(message));
     }
   }
@@ -35,9 +33,4 @@ TUTORIAL.abstractClasses = (function () {
   logger = new InvasiveLogger();
 
   logger.notify("Hello World");
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

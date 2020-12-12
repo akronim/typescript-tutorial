@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.incrementDecrement = (function () {
+namespace IncrementDecrement {
   let counter = 0;
   do {
     ++counter;
@@ -21,9 +19,4 @@ TUTORIAL.incrementDecrement = (function () {
   var size = Size.XL;
   ++size;
   console.log(Size[size]); // undefined
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

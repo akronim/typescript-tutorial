@@ -1,2 +1,2 @@
-import Ferry = require('./exportsObject');
-const ferry = new Ferry('Dartmouth Ferry', 'Dartmouth', 580)
+import { Ferry } from "./exportsObject";
+const ferry = new Ferry("Dartmouth Ferry", "Dartmouth", 580);

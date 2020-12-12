@@ -2,7 +2,7 @@
 declare function require(moduleName: string): any;
 
 // Import - doesn't actually emit code
-import Ferry from "./exportsObject";
+import { Ferry } from "./exportsObject";
 
 const condition = true;
 

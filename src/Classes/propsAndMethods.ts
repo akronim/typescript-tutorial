@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.propertiesAndMethods = (function () {
+namespace PropertiesAndMethods {
   class Song {
     // If you prefix a constructor parameter with an access modifier,
     // such as private, it will automatically be mapped for you
@@ -62,14 +60,9 @@ TUTORIAL.propertiesAndMethods = (function () {
 
   // Error: Cannot assign to a readonly property
   //Playlist.maxSongCount = 20;
+}
 
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-TUTORIAL.propertyGettersAndSetters = (function () {
+namespace PropertyGettersAndSetters {
   // property getters and setters allow you to wrap property
   // access with a method
 
@@ -79,7 +72,7 @@ TUTORIAL.propertyGettersAndSetters = (function () {
     description: string;
     asin: string;
   }
-  
+
   class WarehouseLocation {
     private _stockItem!: StockItem;
     constructor(public aisle: number, public slot: string) {}
@@ -98,12 +91,6 @@ TUTORIAL.propertyGettersAndSetters = (function () {
   warehouseSlot.stockItem = figure;
 
   console.log(warehouseSlot.stockItem);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
+}
 
 // tsc --target ES5 propsAndMethods.ts --outFile ../app.js --watch

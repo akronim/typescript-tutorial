@@ -1,11 +1,11 @@
-class Ferry {
+export class Ferry {
     constructor(
         public name: string,
         public port: string,
         public displacement: number) {
     }
 }
-export = Ferry;
+
 
 // When consuming this style of module, you should use the import/require 
 // style of import

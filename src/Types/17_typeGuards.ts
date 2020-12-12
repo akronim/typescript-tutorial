@@ -1,7 +1,5 @@
-var TUTORIAL = TUTORIAL || {};
-
 // typeof
-TUTORIAL.typeGuards = (function () {
+namespace TypeGuards {
   type alphanumeric = string | number;
 
   function typeGuardExample(stringNumber: alphanumeric) {
@@ -18,15 +16,10 @@ TUTORIAL.typeGuards = (function () {
       return stringNumber.toFixed();
     }
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // instanceof
-TUTORIAL.typeGuards = (function () {
+namespace TypeGuards {
   class Customer {
     isCreditAllowed(): boolean {
       // ...
@@ -44,7 +37,7 @@ TUTORIAL.typeGuards = (function () {
   type BusinessPartner = Customer | Supplier;
 
   function signContract(partner: BusinessPartner): string {
-    let message: string = '';
+    let message: string = "";
     if (partner instanceof Customer) {
       message = partner.isCreditAllowed()
         ? "Sign a new contract with the customer"
@@ -59,15 +52,10 @@ TUTORIAL.typeGuards = (function () {
 
     return message;
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // in
-TUTORIAL.typeGuards = (function () {
+namespace TypeGuards {
   class Customer {
     isCreditAllowed(): boolean {
       // ...
@@ -98,15 +86,10 @@ TUTORIAL.typeGuards = (function () {
     }
     return message;
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // custom type guard
-TUTORIAL.typeGuards = (function () {
+namespace TypeGuards {
   class Customer {
     isCreditAllowed(): boolean {
       // ...
@@ -141,9 +124,4 @@ TUTORIAL.typeGuards = (function () {
 
     return message;
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

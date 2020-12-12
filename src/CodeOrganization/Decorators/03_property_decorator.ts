@@ -1,32 +1,28 @@
 import { logProperty } from "./decorators";
 
 namespace method_decorator_demo {
+  class Person {
+    @logProperty
+    public name: string;
 
-    class Person {
+    @logProperty
+    public surname: string;
 
-        @logProperty
-        public name: string;
-
-        @logProperty
-        public surname: string;
-
-        public constructor(name: string, surname: string) {
-            this.name = name;
-            this.surname = surname;
-        }
-
-        public saySomething(something: string): string {
-            return `${this.name} ${this.surname} says: ${something}`;
-        }
-
+    public constructor(name: string, surname: string) {
+      this.name = name;
+      this.surname = surname;
     }
 
-    const person = new Person("Michael", "Jackson");
-    // Set: name => Michael
-    // Set: surname => Jackson
+    public saySomething(something: string): string {
+      return `${this.name} ${this.surname} says: ${something}`;
+    }
+  }
 
-    person.saySomething("Annie, are you ok?");
-    // Get: name => Michael
-    // Get: surname => Jackson
+  const person = new Person("Michael", "Jackson");
+  // Set: name => Michael
+  // Set: surname => Jackson
 
+  person.saySomething("Annie, are you ok?");
+  // Get: name => Michael
+  // Get: surname => Jackson
 }

@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.lostContext = (function () {
+namespace LostContext {
   class ClickCounter {
     private count = 0;
     registerClick() {
@@ -13,15 +11,10 @@ TUTORIAL.lostContext = (function () {
 
   const target_1 = document.getElementById("scope-target-1");
   target_1 && (target_1.onclick = clickCounter.registerClick);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Preserving context with a property and an arrow function
-TUTORIAL.preservingContextArrow = (function () {
+namespace PreservingContextArrow {
   class ClickCounter {
     private count = 0;
     registerClick = () => {
@@ -35,15 +28,10 @@ TUTORIAL.preservingContextArrow = (function () {
   const target_2 = document.getElementById("scope-target-2");
 
   target_2 && (target_2.onclick = clickCounter.registerClick);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Preserving context with a closure
-TUTORIAL.preservingContextClosure = (function () {
+namespace PreservingContextClosure {
   class ClickCounter {
     private count = 0;
     registerClick() {
@@ -63,16 +51,11 @@ TUTORIAL.preservingContextClosure = (function () {
       clickCounter.registerClick();
     };
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Preserving context with bind
 // The bind function sets the context for the method.
-TUTORIAL.preservingContextBind = (function () {
+namespace PreservingContextBind {
   class ClickCounter {
     private count = 0;
     registerClick() {
@@ -88,15 +71,10 @@ TUTORIAL.preservingContextBind = (function () {
   const target_4 = document.getElementById("scope-target-4");
 
   target_4 && (target_4.onclick = clickHandler);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Preserving context and capturing the event
-TUTORIAL.preservingContextEventCapturing = (function () {
+namespace PreservingContextEventCapturing {
   class ClickCounter {
     private count = 0;
     registerClick(id: string) {
@@ -114,14 +92,7 @@ TUTORIAL.preservingContextEventCapturing = (function () {
       clickCounter.registerClick((<Element>target).id);
     };
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-// <input type="button" id="target" value="Click me" />
+}
 
 /* 
     If you want to keep a clear divide between responsibilities, follow 

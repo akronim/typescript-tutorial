@@ -1,10 +1,8 @@
-// object is a type that represents the non-primitive type, 
-// i.e. anything that is not 
+// object is a type that represents the non-primitive type,
+// i.e. anything that is not
 // number, string, boolean, bigint, symbol, null, or undefined
 
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.objectType = (function () {
+namespace ObjectType {
   const person: {
     name: string;
     age: number;
@@ -16,11 +14,6 @@ TUTORIAL.objectType = (function () {
     hobbies: ["Sports", "Cooking"],
     role: [2, "author"],
   };
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // tsc objectType.ts --outFile ../app.js --watch

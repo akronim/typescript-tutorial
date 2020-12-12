@@ -1,9 +1,7 @@
-var TUTORIAL = TUTORIAL || {};
-
 // Generic programming allows algorithms to be written in way that allows
 // the types to be specified later.
 
-TUTORIAL.genericInterfaces = (function () {
+namespace GenericInterfaces {
   // Generic interfaces
   class CustomerId {
     constructor(private customerIdValue: number) {}
@@ -28,15 +26,10 @@ TUTORIAL.genericInterfaces = (function () {
     getById(id: CustomerId) {
       return this.customers[id.value];
     }
-    
+
     persist(customer: Customer) {
       this.customers[customer.id.value] = customer;
       return customer.id;
     }
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

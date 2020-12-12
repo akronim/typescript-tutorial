@@ -1,9 +1,7 @@
-var TUTORIAL = TUTORIAL || {};
-
 // Generic programming allows algorithms to be written in way that allows
 // the types to be specified later.
 
-TUTORIAL.genericClasses = (function () {
+namespace GenericClasses {
   // Generic classes
   class DomainId<T> {
     constructor(private id: T) {}
@@ -45,9 +43,4 @@ TUTORIAL.genericClasses = (function () {
 
   // OK
   acceptsAnyDomainId(accountId);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

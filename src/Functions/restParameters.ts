@@ -1,7 +1,5 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.restParameters = (function () {
-  // Rest parameters allow calling code to specify zero or more 
+namespace RestParameters {
+  // Rest parameters allow calling code to specify zero or more
   // arguments of the specified type
   function getAverage(...a: number[]): string {
     let total = 0;
@@ -16,9 +14,4 @@ TUTORIAL.restParameters = (function () {
   // 'The average is 6'
   const result = getAverage(2, 4, 6, 8, 10);
   console.log(result);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

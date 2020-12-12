@@ -1,8 +1,6 @@
-var TUTORIAL = TUTORIAL || {};
-
 // You can represent dictionaries in TypeScript using an index type
 
-TUTORIAL.dictionaries = (function () {
+namespace Dictionaries {
   interface Cephalopod {
     hasInk: boolean;
     arms: number;
@@ -28,9 +26,4 @@ TUTORIAL.dictionaries = (function () {
 
   // Remove item
   delete dictionary["octopus vulgaris"];
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

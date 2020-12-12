@@ -1,8 +1,6 @@
-var TUTORIAL = TUTORIAL || {};
-
 // A type constraint can be used to limit the types that
 // a generic function, interface, or class can operate on
-TUTORIAL.typeConstraints = (function () {
+namespace TypeConstraints {
   interface HasName {
     name: string;
   }
@@ -18,9 +16,4 @@ TUTORIAL.typeConstraints = (function () {
   let result = Personalization.greet(hasName);
 
   console.log(result);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

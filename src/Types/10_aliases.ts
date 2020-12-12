@@ -1,7 +1,5 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.aliases = (function () {
-  type Combinable = number | string; 
+namespace Aliases {
+  type Combinable = number | string;
   type ConversionDescriptor = "as-number" | "as-text";
 
   function combine(
@@ -30,9 +28,4 @@ TUTORIAL.aliases = (function () {
 
   const combinedNames = combine("Max", "Anna", "as-text");
   console.log(combinedNames);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

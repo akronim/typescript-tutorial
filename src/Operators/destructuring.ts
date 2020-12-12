@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.destructuring = (function () {
+namespace Destructuring {
   const triangles = [1, 3, 6, 10, 15, 21];
 
   // Destructuring
@@ -92,9 +90,4 @@ TUTORIAL.destructuring = (function () {
   }
   // Destructuring the tuple into named variables
   const [sanFrancisco, london, rome] = getThreeLandmarks();
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

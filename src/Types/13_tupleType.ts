@@ -1,8 +1,6 @@
-var TUTORIAL = TUTORIAL || {};
-
 // A tuple type uses an array, and specifies the type of elements based
 // on their position.
-TUTORIAL.tupleType = (function () {
+namespace TupleType {
   let poem: [number, boolean, string];
 
   // OK
@@ -15,9 +13,4 @@ TUTORIAL.tupleType = (function () {
   // poem = ["my", true, "love"];
 
   console.log({ poem });
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

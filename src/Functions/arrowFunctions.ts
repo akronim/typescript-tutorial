@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.arrowFunctions = (function () {
+namespace ArrowFunctions {
   const shortAddNumbers = (a: number, b: number) => a + b;
 
   const mediumAddNumbers = (a: number, b: number) => {
@@ -20,15 +18,10 @@ TUTORIAL.arrowFunctions = (function () {
 
   let name = makeName("Mirko", "Spirko");
   console.log(name);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Preserving scope with arrow syntax
-TUTORIAL.preservingScope = (function () {
+namespace PreservingScope {
   // const scopeLosingExample = {
   //   text: "Property from lexical scope",
   //   run: function () {
@@ -63,9 +56,4 @@ TUTORIAL.preservingScope = (function () {
 
   // alerts "Property from lexical scope"
   scopePreservingExample.run();
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.typeAnnotations = (function () {
+namespace TypeAnnotations {
   function getAverage(a: number, b: number, c: number): string {
     const total = a + b + c;
     const average = total / 3;
@@ -8,9 +6,4 @@ TUTORIAL.typeAnnotations = (function () {
   }
   const result = getAverage(4, 3, 8); // 'The average is 5'
   console.log(result);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

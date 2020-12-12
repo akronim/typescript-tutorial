@@ -1,7 +1,5 @@
 // functions
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.functions = (function () {
+namespace Functions {
   // we can set return type explicitly: number
   function add(n1: number, n2: number): number {
     return n1 + n2;
@@ -29,9 +27,4 @@ TUTORIAL.functions = (function () {
   addAndHandle(10, 20, (result) => {
     console.log(result);
   });
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

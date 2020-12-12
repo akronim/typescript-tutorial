@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.defaultParameters = (function () {
+namespace DefaultParameters {
   function concatenate(
     items: string[],
     separator = ",",
@@ -21,11 +19,7 @@ TUTORIAL.defaultParameters = (function () {
 
   // 'A,B,C'
   const result = concatenate(items);
-  
+
   // 'B-C'
   const partialResult = concatenate(items, "-", 1);
-
-  return {
-    //
-  };
-})();
+}

@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.optionalParameters = (function () {
+namespace OptionalParameters {
   // Optional parameters must be located after any required
   // parameters in the parameter list.
   function getAverage(a: number, b: number, c?: number): string {
@@ -10,7 +8,7 @@ TUTORIAL.optionalParameters = (function () {
     total += b;
     count++;
 
-    // When you use an optional parameter, you must check the value 
+    // When you use an optional parameter, you must check the value
     // to see if it has been initialized.
     if (typeof c !== "undefined") {
       total += c;
@@ -24,9 +22,4 @@ TUTORIAL.optionalParameters = (function () {
   // 'The average is 5'
   const result = getAverage(4, 6);
   console.log(result);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

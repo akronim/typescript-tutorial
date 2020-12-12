@@ -1,12 +1,10 @@
-var TUTORIAL = TUTORIAL || {};
-
-// To reduce the amount of effort required to create similar types that differ 
-// only in optionality, or readability, mapped types allow you to create 
+// To reduce the amount of effort required to create similar types that differ
+// only in optionality, or readability, mapped types allow you to create
 // variations of an existing type in a single expression. Mapped types use the
-// keyof keyword, which is an index type query that gathers a list of permitted 
+// keyof keyword, which is an index type query that gathers a list of permitted
 // property names for a type in your program.
 
-TUTORIAL.mappedTypesProblem = (function () {
+namespace MappedTypesProblem {
   interface Options {
     material: string;
     backlight: boolean;
@@ -26,14 +24,9 @@ TUTORIAL.mappedTypesProblem = (function () {
     material: string | null;
     backlight: string | null;
   }
+}
 
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-TUTORIAL.mappedTypesSolution = (function () {
+namespace MappedTypesSolution {
   interface Options {
     material: string;
     backlight: boolean;
@@ -47,7 +40,6 @@ TUTORIAL.mappedTypesSolution = (function () {
   type ReadonlyOptions = Readonly<Options>;
   type OptionalOptions = Optional<Options>;
   type NullableOptions = Nullable<Options>;
-
 
   // Using mapped types
 
@@ -70,9 +62,4 @@ TUTORIAL.mappedTypesSolution = (function () {
     backlight: null,
     material: null,
   };
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

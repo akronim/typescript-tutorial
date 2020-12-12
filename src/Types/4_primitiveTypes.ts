@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.primitiveTypes = (function () {
+namespace PrimitiveTypes {
   // Boolean
   let isDone: boolean = false;
 
@@ -19,12 +17,7 @@ TUTORIAL.primitiveTypes = (function () {
 
   // Symbols
   // const ACADEMIC_TITLE = Symbol('title')
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // tsc 4_primitiveTypes.ts --outFile ../app.js --watch
 

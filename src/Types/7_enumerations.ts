@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.enums = (function () {
+namespace Enums {
   enum VehicleType {
     PedalCycle,
     MotorCycle,
@@ -27,12 +25,7 @@ TUTORIAL.enums = (function () {
   }
 
   if (person.role === Role.AUTHOR) {
-    console.log(person.role);       // 2
+    console.log(person.role); // 2
     console.log(Role[person.role]); // AUTHOR
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

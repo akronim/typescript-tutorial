@@ -1,12 +1,10 @@
-var TUTORIAL = TUTORIAL || {};
-
 // - a powerful way of defining contracts within your code as well as
 //      contracts with code outside of your project
 // - can be used to define any structure in your TypeScript program
 // - used at design time to provide autocompletion and at compile time
 //      to provide type checking
 
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   interface LabeledValue {
     label: string;
   }
@@ -17,14 +15,9 @@ TUTORIAL.interfaces = (function () {
 
   let myObj = { size: 10, label: "Size 10 Object" };
   printLabel(myObj);
+}
 
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   interface Point {
     // Properties
     x: number;
@@ -44,15 +37,10 @@ TUTORIAL.interfaces = (function () {
     addPassenger(passenger: Passenger): void;
     removePassenger(passenger: Passenger): void;
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Optional Properties
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   interface SquareConfig {
     color?: string;
     width?: number;
@@ -71,15 +59,10 @@ TUTORIAL.interfaces = (function () {
 
   let mySquare = createSquare({ color: "black" });
   console.log(mySquare);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Readonly properties
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   interface Point {
     readonly x: number;
     readonly y: number;
@@ -87,15 +70,10 @@ TUTORIAL.interfaces = (function () {
 
   let p1: Point = { x: 10, y: 20 };
   // p1.x = 5; // error!
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Extending Interfaces
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   interface Shape {
     color: string;
   }
@@ -107,14 +85,10 @@ TUTORIAL.interfaces = (function () {
   let square = {} as Square;
   square.color = "blue";
   square.sideLength = 10;
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Function Types
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   // To describe a function type with an interface, we give
   // the interface a call signature
   interface SearchFunc {
@@ -129,17 +103,12 @@ TUTORIAL.interfaces = (function () {
   };
 
   console.log(mySearch("abc", "b"));
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Hybrid Types
 // - an object that acts as both a function and an object,
 // with additional properties
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   interface Circle {
     radius: number; //property
     (x: number, y: number): void; //function declaration
@@ -163,16 +132,11 @@ TUTORIAL.interfaces = (function () {
   console.log(circle);
   circle(2, 5); // calling position function
   circle.display(true);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // You can describe hybrid types with an interface,
 // such as a function/object hybrid type
-TUTORIAL.interfaces = (function () {
+namespace Interfaces {
   // Hybrid type
   interface SimpleDocument {
     (selector: string): HTMLElement;
@@ -197,15 +161,9 @@ TUTORIAL.interfaces = (function () {
 
   // Use $ as an object
   $.notify(elem.id);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // An interface can inherit from a class in the same way
 // a subclass can inherit from a superclass.
-
 
 // <div id="myId"></div>

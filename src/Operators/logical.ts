@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.notOperator = (function () {
+namespace NotOperator {
   // NOT
   const truthyString = "Truthy string";
 
@@ -33,14 +31,9 @@ TUTORIAL.notOperator = (function () {
     // the number 0
     // NaN
   }
+}
 
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-TUTORIAL.andOperator = (function () {
+namespace AndOperator {
   // longhand
   if (console) {
     console.log("Console Available");
@@ -56,14 +49,9 @@ TUTORIAL.andOperator = (function () {
 
   // 'Dan'
   console.log(player2);
+}
 
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-TUTORIAL.orOperator = (function () {
+namespace OrOperator {
   // Empty strings are falsey
   let errorMessages = "";
 
@@ -89,14 +77,9 @@ TUTORIAL.orOperator = (function () {
 
   // logs 'Message'
   logger.log("Message");
+}
 
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-TUTORIAL.shortCircuit = (function () {
+namespace ShortCircuit {
   interface Caravan {
     rooms: number;
   }
@@ -106,19 +89,10 @@ TUTORIAL.shortCircuit = (function () {
   if (caravan && caravan.rooms > 5) {
     //...
   }
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
-TUTORIAL.conditionalOperator = (function () {
+namespace ConditionalOperator {
   const isValid = true;
   // Conditional operator
   const message = isValid ? "Okay" : "Failed";
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

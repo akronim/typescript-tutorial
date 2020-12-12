@@ -1,20 +1,13 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.arrays = (function () {
+namespace Arrays {
   let favoriteActivities: string[];
   favoriteActivities = ["Sports", "Cooking"];
 
   for (const hobby of favoriteActivities) {
     console.log(hobby.toUpperCase());
   }
+}
 
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
-
-TUTORIAL.typedArrays = (function () {
+namespace TypedArrays {
   interface Monument {
     name: string;
     heightInMeters: number;
@@ -52,12 +45,7 @@ TUTORIAL.typedArrays = (function () {
 
   // Get the first element from the array, which is the tallest
   const tallestMonument = monumentsOrderedByHeight[0];
-  
+
   // Peter the Great
   console.log(tallestMonument.name);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

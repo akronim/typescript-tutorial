@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.typeAssertions = (function () {
+namespace TypeAssertions {
   let code: any = 123;
   let employeeCode = <number>code;
   console.log(typeof employeeCode); //Output: number
@@ -27,9 +25,4 @@ TUTORIAL.typeAssertions = (function () {
   // 2) using as keyword
   let codeB: any = 123;
   let employeeCodeB = codeB as number;
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

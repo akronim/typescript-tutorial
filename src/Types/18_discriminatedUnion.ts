@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.discriminatedUnion = (function () {
+namespace DiscriminatedUnion {
   interface Cube {
     kind: "cube"; // Discriminant
     size: number;
@@ -31,10 +29,4 @@ TUTORIAL.discriminatedUnion = (function () {
   function assertNever(arg: never): never {
     throw new Error("Possible new tagged type: " + arg);
   }
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-  
-})();
+}

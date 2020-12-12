@@ -1,8 +1,6 @@
-var TUTORIAL = TUTORIAL || {};
-
 // All classes in TypeScript have a constructor, whether you specify one or not.
 
-TUTORIAL.constructors = (function () {
+namespace Constructors {
   class Song {
     // If you prefix a constructor parameter with an access modifier,
     // such as private, it will automatically be mapped for you
@@ -36,12 +34,7 @@ TUTORIAL.constructors = (function () {
   const jukebox = new Jukebox(songs);
 
   jukebox.play();
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Access Modifiers
 // • private

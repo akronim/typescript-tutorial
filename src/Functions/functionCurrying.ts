@@ -1,10 +1,8 @@
-var TUTORIAL = TUTORIAL || {};
-
 // Currying is a process whereby a function with multiple parameters is
 // decomposed into multiple functions that each take a single parameter.
 
 // Currying with arrow functions
-TUTORIAL.functionCurrying = (function () {
+namespace FunctionCurrying {
   // Currying
   const multiply = (a: number) => (b: number) => a * b;
 
@@ -22,15 +20,10 @@ TUTORIAL.functionCurrying = (function () {
 
   // 1,000
   const kilo = orderOfMagnitude(hecta);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Currying with function overloads
-TUTORIAL.functionCurrying = (function () {
+namespace FunctionCurrying {
   function multiply(a: number): (b: number) => number;
   function multiply(a: number, b: number): number;
   function multiply(a: number, b: number = null) {
@@ -54,15 +47,10 @@ TUTORIAL.functionCurrying = (function () {
 
   // 1,000
   const kilo = orderOfMagnitude(hecta);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // Practical currying
-TUTORIAL.functionCurrying = (function () {
+namespace FunctionCurrying {
   const log = (source: string) => (message: string) =>
     console.log(source, message);
 
@@ -73,9 +61,4 @@ TUTORIAL.functionCurrying = (function () {
 
   // Custom Log: Message Two
   customLog("Message Two");
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}

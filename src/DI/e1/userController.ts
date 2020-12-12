@@ -14,7 +14,7 @@ export class UserController {
     this.userRepo = userRepo;
   }
 
-  async handleGetUsers(req, res): Promise<void> {
+  async handleGetUsers(req: any, res: any): Promise<void> {
     const users = await this.userRepo.getUsers();
     return res.status(200).json({ users });
   }

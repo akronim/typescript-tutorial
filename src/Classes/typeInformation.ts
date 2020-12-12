@@ -1,6 +1,4 @@
-var TUTORIAL = TUTORIAL || {};
-
-TUTORIAL.typeInformationInstanceof = (function () {
+namespace TypeInformationInstanceof {
   class Display {
     name: string = "";
   }
@@ -28,15 +26,10 @@ TUTORIAL.typeInformationInstanceof = (function () {
   // false
   isDisplay = hiFi instanceof Display;
   console.log(isDisplay);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
 
 // we can test for the presence of a name property
-TUTORIAL.typeInformationIn = (function () {
+namespace TypeInformationIn {
   class Display {
     name: string = "";
     size!: number;
@@ -79,9 +72,4 @@ TUTORIAL.typeInformationIn = (function () {
   // false - the size property is never initialized
   hasSize = "size" in hiFi;
   console.log(hasSize);
-
-  return {
-    // someProperty: "prop value",
-    // publicMethod: publicMethod,
-  };
-})();
+}
