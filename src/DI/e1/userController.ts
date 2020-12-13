@@ -1,3 +1,4 @@
+import { MockUserRepo } from "./mockUserRepo";
 import { IUserRepo } from "./userRepo"; // Good!
 
 /**
@@ -14,8 +15,12 @@ export class UserController {
     this.userRepo = userRepo;
   }
 
-  async handleGetUsers(req: any, res: any): Promise<void> {
+  async handleGetUsers(): Promise<void> {
     const users = await this.userRepo.getUsers();
-    return res.status(200).json({ users });
+    console.log({ users });
   }
 }
+
+const userController = new UserController(new MockUserRepo());
+
+userController.handleGetUsers();
