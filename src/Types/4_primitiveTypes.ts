@@ -16,16 +16,7 @@ namespace PrimitiveTypes {
   let list: number[] = [1, 2, 3];
 
   // Symbols
-  // const ACADEMIC_TITLE = Symbol('title')
+  const ACADEMIC_TITLE = Symbol("title");
 }
 
 // tsc 4_primitiveTypes.ts --outFile ../app.js --watch
-
-// var yourNamespace = {
-
-//   foo: function() {
-//   },
-
-//   bar: function() {
-//   }
-// };

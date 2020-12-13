@@ -1,4 +1,4 @@
 import "./styles.css";
 import * as _ from "lodash";
 
-import "./DI/e1/userController";
+import "./Types/11_intersectionType";

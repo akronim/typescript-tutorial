@@ -10,7 +10,14 @@ namespace IntersectionType {
   }
   type Biathelete = Skier & Shooter;
 
-  let biathelete: Biathelete = { slide: () => {}, shoot: () => {} };
+  let biathelete: Biathelete = {
+    slide: () => {
+      console.log("sliding");
+    },
+    shoot: () => {
+      console.log("shooting");
+    },
+  };
   biathelete.shoot();
   biathelete.slide();
 }
