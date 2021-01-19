@@ -1,0 +1,16 @@
+The “is a” test in object-orientation involves describing the relationship 
+between objects to validate that the subclass is indeed a specialized version 
+of the superclass. 
+
+For example, “a Cat is a Mammal” and “a Savings Account is a Bank Account.” 
+
+It is usually clear when the relationship is not valid, for example, “a Motor
+Car is a Chassis” doesn’t work, but “a Car has a Chassis” does. 
+
+A “has a” relationship requires delegation (or forwarding), not inheritance.
+
+With mixins, the relationship is best described by a “can do” relationship, 
+for example:
+An actor can do acting.
+Or
+An actor acts.
