@@ -1,37 +1,22 @@
 {
-  "name": "typescripttutorial",
+  "name": "typescript-tutorial",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "typesc": "tsc --target ES6 $npm_config_inFile --outFile ./app.js --watch --module amd",
-    "check-env": "node -e 'console.log(process.env)' | grep npm",
-    "demo": "echo \"Hello $npm_config_first $npm_config_last\""
+    "start": "ts-node ./src/index.ts",
+    "demo": "echo Hello $npm_config_first $npm_config_last",
+    "typesc": "tsc --target ES6 $npm_config_inFile --outFile ./app.js --watch --module amd"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/lodash": "^4.14.159",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^4.2.1",
-    "html-webpack-plugin": "^4.3.0",
-    "mini-css-extract-plugin": "^0.10.0",
-    "ts-loader": "^8.0.2",
-    "typescript": "^3.9.7",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-html-plugin": "^0.1.1"
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
   },
   "comments": {
-    "demo-script": "$ npm run demo --last=Kundel --first=Dominik",
-    "typesc-script": "$ npm run typesc --inFile=./src/Exercises/*.ts"
-  },
-  "dependencies": {
-    "lodash": "^4.17.20",
-    "reflect-metadata": "^0.1.13"
+    "demo-script": "npm run demo --last=John --first=Doe",
+    "typesc-script": "npm run typesc --inFile=./src/Exercises/*.ts"
   }
 }
+

@@ -19,15 +19,10 @@ interface Test {
 
 // Omit a single property:
 type OmitA = Omit<Test, "a">; // Equivalent to: {b: number, c: boolean}
-const newLocal = { a: "A", b: 3, c: true };
-const omitA: OmitA = newLocal;
+const omitA: OmitA = { /* a: "A",*/ b: 3, c: true };
 console.log(omitA);
 
 // Or, to omit multiple properties:
 type OmitAB = Omit<Test, "a" | "b">; // Equivalent to: {c: boolean}
 
-(function () {
-  let x = { a: 1, b: 2, c: 3, z: 26 };
-  let { b, ...y } = x;
-  console.log(y);
-})();
+

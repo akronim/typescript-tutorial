@@ -1,11 +1,18 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "allowJs": false,
-    "sourceMap": true,
-    "experimentalDecorators": true,
-  }
+  "compilerOptions": {      
+    // to tell the Typescript compiler to transpile our Typescript code into es6 JavaScript                  
+    "target": "es6",   
+    // for structuring and organizing JavaScript code (require(), module.exports ...)                            
+    "module": "commonjs",                           
+    "outDir": "./dist",                             
+    "rootDir": "./src",                             
+    "strict": true,
+    "moduleResolution": "node",
+    // to compile ES6 modules to commonjs modules
+    "esModuleInterop": true,                       
+  },
+  // what not to compile
+  "exclude":[
+    "./node_modules"
+  ]
 }

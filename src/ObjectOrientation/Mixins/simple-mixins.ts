@@ -50,17 +50,17 @@ class Acts {
 
 // Composing classes
 class Actor implements Acts {
-  act: () => void; // supply temporary properties
+  act!: () => void; // supply temporary properties
 }
 applyMixins(Actor, [Acts]);
 
 class AllRounder implements Acts, Dances, Sings {
-  act: () => void;
+  act!: () => void;
 
-  dance: () => void;
+  dance!: () => void;
 
-  public singsMessage: string;
-  sing: () => string;
+  public singsMessage!: string;
+  sing!: () => string;
 }
 applyMixins(AllRounder, [Acts, Dances, Sings]);
 
