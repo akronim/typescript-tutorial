@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node ./src/index.ts",
+    "dev": "nodemon ./src/index.ts",
     "demo": "echo Hello $npm_config_first $npm_config_last",
     "typesc": "tsc --target ES6 $npm_config_inFile --outFile ./app.js --watch --module amd"
   },
@@ -11,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "nodemon": "^2.0.19",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   },
@@ -19,4 +21,3 @@
     "typesc-script": "npm run typesc --inFile=./src/Exercises/*.ts"
   }
 }
-

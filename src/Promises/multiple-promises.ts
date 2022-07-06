@@ -19,7 +19,7 @@ namespace MultiplePromises {
           reject: (reason: string) => void
         ) => {
           // Simulating async data access with a timeout
-          window.setTimeout(() => {
+          setTimeout(() => {
             const result = this.data[id];
             if (typeof result == "undefined") {
               reject("No matching record");

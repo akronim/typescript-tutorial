@@ -4,6 +4,8 @@ npm install -g typescript
 ### check version
 tsc --version
 
+### mkdir typescript-sandobox and cd into it
+
 ### create a tsconfig.json file in the project root directory
 tsc --init
 
@@ -45,22 +47,64 @@ console.log(sum(8,4))
 ### install typescript compiler
 npm install -D typescript
 
-### install ts-node
+### running - way one
+#### manually build ts into js - build everything inside src
+tsc
+
+#### run
+node dist/index.js
+
+### running - way two
+#### manually build single file plus watch mode
+tsc --target ES6 ./src/index.ts --outFile ./app.js --watch
+
+
+### running - way three
+#### install ts-node
 npm install -D ts-node
 
-### package.json - add:
+#### package.json - add:
 ```json
 "scripts": {
    "start": "ts-node ./src/index.ts"
 }
 ```
 
+#### run
+npm start
 
-### manually
-### build Typescript into JavaScript - build everything inside src
-tsc
+### running - way four
+#### install Nodemon
+npm install -D nodemon
 
-### run
-node dist/index.js
+#### package.json - add:
+```json
+"scripts": {
+   "start": "ts-node ./src/index.ts",
+   "dev": "nodemon ./src/index.ts"
+}
+```
 
-// tsc --target ES6 ./src/Classes/propsAndMethods.ts --outFile ./app.js --watch
+#### run
+npm run dev
+
+
+### mkdir ./src/Functions
+
+### touch ./src/Functions/restParameters.ts
+```ts
+namespace RestParameters {
+  function getAverage(...arr: number[]): string {
+    let total = arr.reduce(function (a, b) { return a + b; }, 0);
+    return "The average is " + total / arr.length;
+  }
+
+  const result = getAverage(2, 4, 6, 8, 10);
+  console.log(result);
+}
+```
+
+### src/index.ts - import another file
+```ts
+import "./Functions/restParameters";
+```

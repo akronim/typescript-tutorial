@@ -1,1 +1,1 @@
-import "./Classes/abstractClasses";
+import "./Interfaces/interfaces";

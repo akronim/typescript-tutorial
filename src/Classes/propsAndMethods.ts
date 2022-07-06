@@ -93,4 +93,3 @@ namespace PropertyGettersAndSetters {
   console.log(warehouseSlot.stockItem);
 }
 
-// tsc --target ES5 propsAndMethods.ts --outFile ../app.js --watch

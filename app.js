@@ -1,5 +1,5 @@
-let partialFoo = {};
-partialFoo.bar = 3;
-console.log(partialFoo);
-const omitA = { /* a: "A",*/ b: 3, c: true };
-console.log(omitA);
+// import "./Classes/classHeritage";
+function sum(num1, num2) {
+    return num1 + num2;
+}
+console.log(sum(8, 4));
