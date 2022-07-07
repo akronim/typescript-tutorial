@@ -9,7 +9,7 @@ namespace RealMixins {
     return class extends Base {
       message: string = "Acting";
       act() {
-        alert(this.message);
+        console.log(this.message);
       }
     };
   }

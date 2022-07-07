@@ -4,7 +4,7 @@ namespace RealMixinsFull {
   function Sings<TBase extends Constructor>(Base: TBase) {
     return class extends Base {
       sing() {
-        alert("Singing");
+        console.log("Singing");
       }
     };
   }
@@ -12,14 +12,14 @@ namespace RealMixinsFull {
   function Dances<TBase extends Constructor>(Base: TBase) {
     return class extends Base {
       dance() {
-        alert("Dancing");
+        console.log("Dancing");
       }
     };
   }
   function Acts<TBase extends Constructor>(Base: TBase) {
     return class extends Base {
       act() {
-        alert("Acting");
+        console.log("Acting");
       }
     };
   }
