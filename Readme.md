@@ -17,7 +17,7 @@ npm init -y
 {
   "compilerOptions": {      
     // to tell the Typescript compiler to transpile our Typescript code into es6 JavaScript                  
-    "target": "es6",   
+    "target": "es2016",   
     // for structuring and organizing JavaScript code (require(), module.exports ...)                            
     "module": "commonjs",                           
     "outDir": "./dist",                             
@@ -25,11 +25,16 @@ npm init -y
     "strict": true,
     "moduleResolution": "node",
     // to compile ES6 modules to commonjs modules
-    "esModuleInterop": true,                       
+    "esModuleInterop": true, 
+    "resolveJsonModule": true, /* in case you are importing JSON files */
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true                      
   },
   // what not to compile
   "exclude":[
-    "./node_modules"
+    "./node_modules",
+    "./_tests"
   ]
 }
 ```
@@ -56,8 +61,8 @@ node dist/index.js
 
 ### running - way two
 #### manually build single file plus watch mode
-tsc --target ES6 ./src/index.ts --outFile ./app.js --watch
-
+tsc --target es2016 ./src/index.ts --outFile ./app.js --watch
+tsc --target es2016 ./src/index.ts --outFile ./app.js --module amd --watch
 
 ### running - way three
 #### install ts-node
@@ -108,3 +113,29 @@ namespace RestParameters {
 ```ts
 import "./Functions/restParameters";
 ```
+
+### testing
+npm i -D jest @types/jest ts-jest
+
+### touch jest.config.js
+```js
+module.exports = {
+    transform: {
+        '^.+\\.ts?$': 'ts-jest',
+    },
+    testEnvironment: 'node',
+    testRegex: './_tests/.*\\.(test|spec)?\\.(js|ts)$',
+    moduleFileExtensions: ['ts', 'js', 'json', 'node'],
+    roots: ['<rootDir>/_tests'],
+};
+```
+
+### mkdir _tests
+### touch ./_tests/sandbox.spec.ts
+
+### package.json -> scripts
+"test": "jest"
+
+### npm test
+
+### https://www.youtube.com/watch?v=Z6kt1N3Lx1c

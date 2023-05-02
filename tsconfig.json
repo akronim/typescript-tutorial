@@ -1,7 +1,7 @@
 {
   "compilerOptions": {      
     // to tell the Typescript compiler to transpile our Typescript code into es6 JavaScript                  
-    "target": "es6",   
+    "target": "es2016",   
     // for structuring and organizing JavaScript code (require(), module.exports ...)                            
     "module": "commonjs",                           
     "outDir": "./dist",                             
@@ -9,10 +9,15 @@
     "strict": true,
     "moduleResolution": "node",
     // to compile ES6 modules to commonjs modules
-    "esModuleInterop": true,                       
+    "esModuleInterop": true, 
+    "resolveJsonModule": true, /* in case you are importing JSON files */
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true                      
   },
   // what not to compile
   "exclude":[
-    "./node_modules"
+    "./node_modules",
+    "./_tests"
   ]
 }
